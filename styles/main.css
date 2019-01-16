@@ -1,5 +1,8 @@
+/**
 @import '../node_modules/bootstrap/dist/css/bootstrap-reboot.css';
 @import '../node_modules/bootstrap/dist/css/bootstrap.css';
+**/
+
 @font-face {
   font-family: 'Josefin';
   src: url('../fonts/Josefin_Sans/JosefinSans-Bold.ttf');
