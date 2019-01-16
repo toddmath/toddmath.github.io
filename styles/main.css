@@ -1,0 +1,183 @@
+@import '../node_modules/bootstrap/dist/css/bootstrap-reboot.css';
+@import '../node_modules/bootstrap/dist/css/bootstrap.css';
+@font-face {
+  font-family: 'Josefin';
+  src: url('../fonts/Josefin_Sans/JosefinSans-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Josefin';
+  src: url('../fonts/Josefin_Sans/JosefinSans-BoldItalic.ttf');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Josefin';
+  src: url('../fonts/Josefin_Sans/JosefinSans-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Josefin';
+  src: url('../fonts/Josefin_Sans/JosefinSans-Italic.ttf');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Titillium';
+  src: url('../fonts/Titillium_Web/TitilliumWeb-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Titillium';
+  src: url('../fonts/Titillium_Web/TitilliumWeb-Italic.ttf');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Titillium';
+  src: url('../fonts/Titillium_Web/TitilliumWeb-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Titillium';
+  src: url('../fonts/Titillium_Web/TitilliumWeb-BoldItalic.ttf');
+  font-weight: bold;
+  font-style: italic;
+}
+
+html {
+  padding: 30px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern";
+  -webkit-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern";
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body::after, body::before, body {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d4e4ef+0,86aecc+100;Grey+Gloss */
+  background: #d4e4ef;
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, hsla(204, 46%, 89%, 1) 0%, hsla(206, 41%, 66%, 1) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, hsla(204, 46%, 89%, 1) 0%, hsla(206, 41%, 66%, 1) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, hsla(204, 46%, 89%, 1) 0%, hsla(206, 41%, 66%, 1) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+body::after, body::before, body {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c9de96+0,8ab66b+44,398235+100;Green+3D+%233 */
+  background: #c9de96;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #c9de96 0%, #8ab66b 44%, #398235 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #c9de96 0%, #8ab66b 44%, #398235 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #c9de96 0%, #8ab66b 44%, #398235 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9de96', endColorstr='#398235', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+body, html, ol, ul, li, p {
+  font-family: 'Josefin' !important;
+  font-weight: normal !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Titillium' !important;
+  font-weight: bold !important;
+}
+
+.card-body, .list-group, .list-group-item, .card-text {
+  font-family: 'Josefin' !important;
+}
+
+.card-title, .card-header, .container, .container-fluid {
+  font-family: 'Titillium' !important;
+}
+
+.btn {
+  margin-top: 10px;
+}
+
+/*
+h1 {
+  font-size: 1.75em;
+  font-style: inherit;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  color: --dark;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-style: inherit;
+}
+*/
+
+ol, ul, li {
+  font-size: 1em;
+  line-height: 2.75ch;
+}
+
+p {
+  font-size: 1.05em;
+  line-height: 2.5ch;
+  word-wrap: break-word;
+  justify-content: left;
+}
+
+img::before, img::after {
+  size: 100%;
+  border: none;
+}
+
+img#Todd {
+  border: 2px solid black;
+  box-shadow: 6px 8px 12px -1px black;
+  border-radius: 6px;
+  transition: ease-in 300ms box-shadow;
+}
+
+img#Todd:hover, img#Todd:focus, img#Todd:active {
+  box-shadow: 2px 3px 3px black;
+}
+
+.navbar, nav {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0e0e0e+0,7d7e7d+100 */
+  background: rgb(14, 14, 14);
+  /* Old browsers */
+  background: -moz-linear-gradient(left, rgba(14, 14, 14, 1) 0%, rgba(125, 126, 125, 1) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(14, 14, 14, 1) 0%, rgba(125, 126, 125, 1) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(14, 14, 14, 1) 0%, rgba(125, 126, 125, 1) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e0e0e', endColorstr='#7d7e7d', GradientType=1);
+  /* IE6-9 */
+  /* IE6-9 */
+}
+
+.display-4 {
+  font-family: 'Titillium' !important;
+}
