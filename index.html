@@ -40,46 +40,33 @@
     <link href="./styles/main.css" rel="stylesheet" />
   </head>
   <body data-spy="scroll" data-target="#myScrollspy" data-offset="10">
-    <nav class="navbar navbar-expand-sm bg-light fixed-top" id="myScrollspy">
-      <a class="navbar-brand p-0" href="">
-        <img src="todd.png" alt="logo" style="width:40px;" class="p-0 md-0" />
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#collapsibleNavbar"
+    <nav class="navbar" id="myScrollspy" role="tablist">
+      <ul
+        class="nav bg-secondary fixed-top nav-justified navbar-light nav-tabs"
       >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="nav nav-pills">
-          <li class="nav-item">
-            <a class="nav-link active" href="#AboutMe" data-toggle="pill"
-              >About Me</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#Reasons" data-toggle="pill"
-              >Why I'm enrolled in CIS128</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#Tech" data-toggle="pill"
-              >Technologies Used</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#Resources" data-toggle="pill"
-              >Resources</a
-            >
-          </li>
-        </ul>
-      </div>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link active" href="#AboutMe" data-toggle="tab"
+            >About Me</a
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" href="#Reasons" data-toggle="tab"
+            >Why I'm enrolled in CIS128</a
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" href="#Tech" data-toggle="tab"
+            >Technologies Used</a
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" href="#Resources" data-toggle="tab">Resources</a>
+        </li>
+      </ul>
     </nav>
     <div
       class="container-fluid d-flex text-center flex-wrap flex-column justify-content-center align-content-center"
-      style="margin-top:80px;"
+      style="padding-top: 1opx;"
     >
       <header>
         <h1 class="display-4">Mobile Web App Development</h1>
@@ -87,7 +74,11 @@
       </header>
     </div>
     <main>
-      <div class="container-fluid overflow-auto tab-pane active" id="AboutMe">
+      <div
+        class="container-fluid overflow-auto tab-pane active"
+        id="AboutMe"
+        role="tabpanel"
+      >
         <div
           class="card min-vw-75 rounded shadow p-3 mb-5 border border-success"
         >
@@ -130,13 +121,13 @@
         </div>
       </div>
 
-      <div class="tab-pane container-fluid active" id="Reasons">
+      <div class="tab-pane container-fluid" id="Reasons" role="tabpanel">
         <div
           class="card min-vw-75 rounded shadow p-3 mb-5 border border-success"
         >
-          <div class="card-header bg-secondary">
+          <h3 class="card-header bg-secondary">
             Reasons For Taking This Class
-          </div>
+          </h3>
           <div class="card-body">
             <p>
               I am attending this class because I love learning about Web
@@ -149,7 +140,7 @@
         </div>
       </div>
 
-      <div class="container-fluid tab-pane" id="Tech">
+      <div class="container-fluid tab-pane" id="Tech" role="tabpanel">
         <div
           class="card min-vw-75 rounded shadow p-3 mb-5 border border-success"
         >
@@ -164,7 +155,7 @@
         </div>
       </div>
 
-      <div class="container-fluid tab-pane" id="Resources">
+      <div class="container-fluid tab-pane" id="Resources" role="tabpanel">
         <div
           class="card min-vw-75 rounded shadow p-3 mb-5 border border-success"
         >
