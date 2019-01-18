@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
+    <!-- Required meta tags, per bootstrap docs -->
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
+    <!-- I prefer to use the locally installed bootstrap, if possible. 
+    Github pages throws errors, however, even if instructed to use the CDN's.
+    After contemplating whether to scrap bootstrap altogether, I decided to
+    instead deploy this page onto a Netlify public, https, CDN server -->
+    <!-- Locally installed bootstrap, jquery and popper below -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/popper.js/dist/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -16,14 +20,14 @@
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
-    <!-- Latest compiled and minified CSS -->
+    <!-- Latest compiled and minimized CSS -->
+    <!-- CDN version of bootstrap below
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
       integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
       crossorigin="anonymous"
     />
-    <!--
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
@@ -36,30 +40,36 @@
       crossorigin="anonymous"
     ></script>
     -->
-    <title>CIS-128-OLH-Mobile Web App Development-CRN 43884</title>
+    <title>CIS128-OLH Mobile Web App Development CRN43884</title>
     <link href="./styles/main.css" rel="stylesheet" />
   </head>
   <body data-spy="scroll" data-target="#myScrollspy" data-offset="10">
+    <!-- W3 validator throws an error at 'role="tablist"' in the <nav> tag below, 
+  however it's needed for scrollspy functionality as per bootstrap's docs instructions -->
     <nav class="navbar" id="myScrollspy" role="tablist">
       <ul
         class="nav bg-secondary fixed-top nav-justified navbar-light nav-tabs"
       >
         <li class="nav-item" role="presentation">
+          <!-- Per w3 validator suggestion I removed all alt="foo" on <a> tags -->
           <a class="nav-link active" href="#AboutMe" data-toggle="tab"
             >About Me</a
           >
         </li>
         <li class="nav-item" role="presentation">
+          <!-- Per w3 validator suggestion I removed all alt="foo" on <a> tags -->
           <a class="nav-link" href="#Reasons" data-toggle="tab"
             >Why I'm enrolled in CIS128</a
           >
         </li>
         <li class="nav-item" role="presentation">
+          <!-- Per w3 validator suggestion I removed all alt="foo" on <a> tags -->
           <a class="nav-link" href="#Tech" data-toggle="tab"
             >Technologies Used</a
           >
         </li>
         <li class="nav-item" role="presentation">
+          <!-- Per w3 validator suggestion I removed all alt="foo" on <a> tags -->
           <a class="nav-link" href="#Resources" data-toggle="tab">Resources</a>
         </li>
       </ul>
@@ -90,11 +100,12 @@
             >
               <img
                 class="card-img min-win-vw-50 rounded"
-                style="width: 25%; height: auto;"
+                style="width: 25%;
+              height: auto;"
                 src="Todd3.png"
                 id="Todd"
-                alt="Todd"
-              />
+                alt=""
+              /><!-- Per w3 validator suggestion I changed alt="Todd" to alt="" -->
               <p class="card-text d-inline min-vw-50 p-4">
                 I'm 32 years old, and am currently enrolled at CSM. This
                 semester, I'm taking CIS114-Javascript/Ajax Programming,
@@ -109,12 +120,12 @@
                   href="https://www.toddmath.com"
                   class=" p-2 mb-2 btn btn-success rounded"
                   >My Blog</a
-                >
+                ><!-- Per w3 validator suggestion I removed all alt="foo" on <a> tags -->
                 <a
                   href="https://github.com/toddmath"
                   class=" p-2 mb-2 btn btn-success rounded"
                   >Github Page</a
-                >
+                ><!-- Per w3 validator suggestion I removed all alt="foo" on <a> tags -->
               </div>
             </div>
           </div>
@@ -164,16 +175,18 @@
             <ul class="list-group list-group-flush">
               <li class="list-group-item bg-light">
                 <a class="card-link" href="https://github.com">Github</a
-                ><span
+                ><!-- Per w3 validator suggestion I removed all alt="foo" on <a> tags -->
+                <span
                   >&nbsp;This website's, obviously, key to any software
-                  developer. Full of awesome and incredibly useful repos of
-                  open-source software.</span
+                  developer. Full of awesome and incredibly useful repositories
+                  of open-source software.</span
                 >
               </li>
               <li class="list-group-item bg-light">
                 <a class="card-link" href="https://stackoverflow.com"
                   >Stackoverflow</a
-                ><span
+                ><!-- Per w3 validator suggestion I removed all alt="foo" on <a> tags -->
+                <span
                   >&nbsp;This website's my number one go-to whenever I am up
                   against a wall and need to ask a question. One piece of
                   advice, search for your answer before asking, because most of
@@ -183,18 +196,20 @@
               </li>
               <li class="list-group-item bg-light">
                 <a class="card-link" href="https://dev.to">dev.to</a
-                ><span
+                ><!-- Per w3 validator suggestion I removed all alt="foo" on <a> tags -->
+                <span
                   >&nbsp;This is a great blog, with well written articles on
                   various, practical software subjects. I regularly check it
-                  out, and enjoy reading the many knowledgable articles. Check
+                  out, and enjoy reading the many knowledgeable articles. Check
                   it out!</span
                 >
               </li>
               <li class="list-group-item bg-light">
                 <a class="card-link" href="https://scotch.io">scotch.io</a
-                ><span
+                ><!-- Per w3 validator suggestion I removed all alt="foo" on <a> tags -->
+                <span
                   >&nbsp;Another interesting blog, I regularly check this page
-                  out for the entertaining and knowledgable articles.</span
+                  out for the entertaining and knowledgeable articles.</span
                 >
               </li>
             </ul>
