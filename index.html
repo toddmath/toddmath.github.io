@@ -7,16 +7,18 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <!-- Make site compatible with older Internet Explorer -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- SEO meta tags -->
     <meta
       name="description"
       content="Todd Matheson's page for CSM course CIS-128, Mobile Web App Development. Features about me, why I'm taking this course, technology used and favorite resources."
     />
-    <!-- Twitter SEO Card -->
+    <!-- SEO twitter card -->
     <meta name="twitter:card" content="summary_large_image"></meta>
     <meta name="twitter:site" content="@tM0Nk3y"></meta>
     <meta name="twitter:creator" content="@tM0Nk3y"></meta>
-    <!-- OpenGraph Tags for FaceBook SEO -->
+    <!-- SEO OpenGraph Tags (for FaceBook) -->
     <meta property="fb:app_id" content="240386370224893" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://master--vigorous-lichterman-1693ae.netlify.com" />
@@ -27,10 +29,12 @@
     <meta property="og:image:height" content="1005" />
     <meta property="og:locale" content="en_US" />
 
-    <!-- I prefer to use the locally installed bootstrap, if possible. 
-    Github pages throws errors, however, even if instructed to use the CDN's.
-    After contemplating whether to scrap bootstrap altogether, I decided to
-    instead deploy this page onto a Netlify public, https, CDN server -->
+    <!--
+      I prefer to use the locally installed bootstrap, if possible. 
+      Github pages throws errors, however, even if instructed to use the CDN's.
+      After contemplating whether to scrap bootstrap altogether, instead I 
+      deployed onto Netlify's public, HTTPS, CDN server 
+    -->
     <!-- Locally installed bootstrap, jquery and popper below -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/popper.js/dist/popper.min.js"></script>
@@ -39,28 +43,8 @@
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
-    <!-- Latest compiled and minimized CSS -->
-    <!-- CDN version of bootstrap below
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-      crossorigin="anonymous"
-    ></script>
-    -->
     <title>CIS128-OLH Mobile Web App Development CRN43884</title>
-    <link href="./styles/main.css" rel="stylesheet" />
+    <link href="styles/main.css" rel="stylesheet" />
   </head>
   <body data-spy="scroll" data-target="#myScrollspy" data-offset="10">
     <!-- W3 validator throws an error at 'role="tablist"' in the <nav> tag below, 
@@ -78,7 +62,7 @@
         <li class="nav-item" role="presentation">
           <!-- Per w3 validator suggestion I removed all alt="foo" on <a> tags -->
           <a class="nav-link" href="#Reasons" data-toggle="tab"
-            >Why I'm enrolled in CIS128</a
+            >Why I'm taking CIS128</a
           >
         </li>
         <li class="nav-item" role="presentation">
@@ -112,7 +96,7 @@
           class="card min-vw-75 rounded shadow p-3 mb-5 border border-success"
         >
           <h3 class="card-header bg-secondary">About Me</h3>
-          <a name="Aboutme"></>
+          <a name="Aboutme"></a>
           <div class="card-body">
             <h4 class="card-subtitle mb-2 text-muted">Todd Matheson</h4>
             <div
@@ -134,8 +118,6 @@
                 paths towards my passion, Web Development.
               </p>
             </div>
-            <div class="btn-toolbar">
-              <div class="btn-group">
                 <a
                   href="https://www.toddmath.com"
                   class=" p-2 mb-2 btn btn-success rounded"
@@ -144,11 +126,8 @@
                 <a
                   href="https://github.com/toddmath"
                   class=" p-2 mb-2 btn btn-success rounded"
-                  >Github Page</a
-                ><!-- Per w3 validator suggestion I removed all alt="foo" on <a> tags -->
-              </div>
+                  >Github Page</a><!-- Per w3 validator suggestion I removed all alt="foo" on <a> tags -->
             </div>
-          </div>
         </div>
       </div>
 
