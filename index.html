@@ -3,9 +3,32 @@
   <head>
     <!-- Required meta tags, per bootstrap docs -->
     <meta charset="utf-8" />
+    <!-- Locally installed bootstrap, jquery and popper below -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <script src="jquery-ui-1.12.1.custom/jqueryui-bootstrap-adapter.min.js"></script>
+    <!-- jQuery plugins (jQuery-easing, jQuery-scrollto, jQuery-localscroll) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/jquery.localscroll@2.0.0/jquery.localScroll.min.js"></script>
+    <script src="/jquery-ui-1.12.1.custom/jquery.color.plus-names-2.1.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.min.js"></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.7.1/js/all.js"
+      integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.0.11/svg.min.js"
+      integrity="sha256-VFLW6btZXqPhfFjeYlnMAjGH+z4Nn3HjmopZlY6u16E="
+      crossorigin="anonymous"
+    ></script>
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      content="width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=no"
     />
     <!-- Make site compatible with older Internet Explorer -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -14,66 +37,81 @@
       name="description"
       content="Todd Matheson's page for CSM course CIS-128, Mobile Web App Development. Features about me, why I'm taking this course, technology used and favorite resources."
     />
+    <meta
+      name="keywords"
+      content="Todd Matheson, about me, technologies used, resources, reasons to take course CIS-128, Assignment1"
+    />
+    <meta name="author" content="Todd Matheson" />
     <!-- SEO twitter card -->
-    <meta name="twitter:card" content="summary_large_image"></meta>
-    <meta name="twitter:site" content="@tM0Nk3y"></meta>
-    <meta name="twitter:creator" content="@tM0Nk3y"></meta>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@tM0Nk3y" />
+    <meta name="twitter:creator" content="@tM0Nk3y" />
     <!-- SEO OpenGraph Tags (for FaceBook) -->
     <meta property="fb:app_id" content="240386370224893" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://master--vigorous-lichterman-1693ae.netlify.com" />
-    <meta property="og:title" content="CIS128-OLH Mobile Web App Development CRN43884" />
-    <meta property="og:description" content="Todd Matheson's page for CSM course CIS-128, Mobile Web App Development. Features about me, why I'm taking this course, technology used and favorite resources." />
-    <meta property="og:image" content="https://master--vigorous-lichterman-1693ae.netlify.com/Todd3.png" />
+    <meta
+      property="og:url"
+      content="https://master--vigorous-lichterman-1693ae.netlify.com"
+    />
+    <meta
+      property="og:title"
+      content="CIS128-OLH Mobile Web App Development CRN43884"
+    />
+    <meta
+      property="og:description"
+      content="Todd Matheson's page for CSM course CIS-128, Mobile Web App Development. Features about me, why I'm taking this course, technology used and favorite resources."
+    />
+    <meta
+      property="og:image"
+      content="https://master--vigorous-lichterman-1693ae.netlify.com/Todd3.png"
+    />
     <meta property="og:image:width" content="1005" />
     <meta property="og:image:height" content="1005" />
     <meta property="og:locale" content="en_US" />
-
-    <!--
-      I prefer to use the locally installed bootstrap, if possible. 
-      Github pages throws errors, however, even if instructed to use the CDN's.
-      After contemplating whether to scrap bootstrap altogether, instead I 
-      deployed onto Netlify's public, HTTPS, CDN server 
-    -->
-    <!-- Locally installed bootstrap, jquery and popper below -->
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/popper.js/dist/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
     <title>CIS128-OLH Mobile Web App Development CRN43884</title>
     <link href="styles/main.css" rel="stylesheet" />
   </head>
+
   <body data-spy="scroll" data-target="#myScrollspy" data-offset="10">
     <!-- W3 validator throws an error at 'role="tablist"' in the <nav> tag below, 
   however it's needed for scrollspy functionality as per bootstrap's docs instructions -->
-    <nav class="navbar" id="myScrollspy" role="tablist">
-      <ul
-        class="nav bg-secondary fixed-top nav-justified navbar-light nav-tabs"
-      >
-        <li class="nav-item" role="presentation">
+    <nav class="navbar " id="myScrollspy" role="tablist">
+      <ul class="nav fixed-top bg-dark navbar-dark nav-justified nav-tabs">
+        <li class="nav-item text-nowrap" role="presentation">
           <!-- Per w3 validator suggestion I removed all alt="foo" on <a> tags -->
-          <a class="nav-link active" href="#AboutMe" data-toggle="tab"
+          <a
+            class="nav-link active"
+            id="aboutmeNavLink"
+            href="#aboutme"
+            data-toggle="tab"
             >About Me</a
           >
         </li>
-        <li class="nav-item" role="presentation">
+        <li class="nav-item text-nowrap" role="presentation">
           <!-- Per w3 validator suggestion I removed all alt="foo" on <a> tags -->
-          <a class="nav-link" href="#Reasons" data-toggle="tab"
+          <a
+            class="nav-link"
+            id="reasonsNavLink"
+            href="#reasons"
+            data-toggle="tab"
             >Why I'm taking CIS128</a
           >
         </li>
-        <li class="nav-item" role="presentation">
+        <li class="nav-item text-nowrap" role="presentation">
           <!-- Per w3 validator suggestion I removed all alt="foo" on <a> tags -->
-          <a class="nav-link" href="#Tech" data-toggle="tab"
+          <a class="nav-link" id="techNavLink" href="#tech" data-toggle="tab"
             >Technologies Used</a
           >
         </li>
-        <li class="nav-item" role="presentation">
+        <li class="nav-item text-nowrap" role="presentation">
           <!-- Per w3 validator suggestion I removed all alt="foo" on <a> tags -->
-          <a class="nav-link" href="#Resources" data-toggle="tab">Resources</a>
+          <a
+            class="nav-link"
+            id="resourcesNavLink"
+            href="#resources"
+            data-toggle="tab"
+            >Resources</a
+          >
         </li>
       </ul>
     </nav>
@@ -81,34 +119,37 @@
       class="container-fluid d-flex text-center flex-wrap flex-column justify-content-center align-content-center"
       style="padding-top: 10px;"
     >
-      <header>
-        <h1 class="display-4">Mobile Web App Development</h1>
-        <h2>(CIS128-OLH, CRN 43884)</h2>
+      <header id="title" class="mx-auto w-auto font-weight-bold">
+        <h1 class="title text-center font-weight-bolder" id="h11">
+          Mobile Web App Development
+        </h1>
+        <h1 class="title text-center font-weight-lighter" id="h12">
+          (CIS128-OLH, CRN 43884)
+        </h1>
       </header>
     </div>
     <main>
       <div
-        class="container-fluid overflow-auto tab-pane active"
+        class="container-fluid overflow-auto tab-pane active min-vw-50 w-auto"
         id="AboutMe"
         role="tabpanel"
       >
         <div
-          class="card min-vw-75 rounded shadow p-3 mb-5 border border-success"
+          class="card min-vw-50 rounded shadow p-3 mb-5 border border-success"
         >
-          <h3 class="card-header bg-secondary">About Me</h3>
-          <a name="Aboutme"></a>
+          <h3 class="card-header bg-secondary">
+            <a id="aboutme">About Me</a>
+          </h3>
           <div class="card-body">
             <h4 class="card-subtitle mb-2 text-muted">Todd Matheson</h4>
             <div
-              class="d-inline-flex flex-wrap flex-sm-nowrap flex-row justify-content-center align-items-start"
+              class="d-inline-flex flex-wrap flex-sm-nowrap flex-row justify-content-center align-items-center"
             >
               <img
-                class="card-img min-win-vw-50 rounded"
-                style="width: 25%;
-              height: auto;"
+                class=""
                 src="Todd3.png"
                 id="Todd"
-                alt=""
+                alt="Todd Matheson"
               /><!-- Per w3 validator suggestion I changed alt="Todd" to alt="" -->
               <p class="card-text d-inline min-vw-50 p-4">
                 I'm 32 years old, and am currently enrolled at CSM. This
@@ -118,26 +159,38 @@
                 paths towards my passion, Web Development.
               </p>
             </div>
-                <a
-                  href="https://www.toddmath.com"
-                  class=" p-2 mb-2 btn btn-success rounded"
-                  >My Blog</a
-                ><!-- Per w3 validator suggestion I removed all alt="foo" on <a> tags -->
-                <a
-                  href="https://github.com/toddmath"
-                  class=" p-2 mb-2 btn btn-success rounded"
-                  >Github Page</a><!-- Per w3 validator suggestion I removed all alt="foo" on <a> tags -->
+            <div
+              class="btn-group mb-4 mt-2 btn-group-lg align-self-start"
+              role="group"
+              aria-label="Links for Todd Matheson's profile pages."
+            >
+              <a
+                href="https://www.toddmath.com"
+                class=" p-2 mx-1 mt-auto mb-auto btn btn-primary rounded align-self-start "
+                target="_blank"
+                title="Check out my blog I created"
+                role="button"
+                ><i class="fas fa-blog fa-3x"></i></a
+              ><!-- Per w3 validator suggestion I removed all alt="foo" on <a> tags -->
+              <a
+                href="https://github.com/toddmath"
+                class=" p-2 mx-1 mt-auto mb-auto btn btn-primary rounded align-self-start"
+                target="_blank"
+                role="button"
+              >
+                <i class="fab fa-github fa-3x" title="My Github profile"></i></a
+              ><!-- Per w3 validator suggestion I removed all alt="foo" on <a> tags -->
             </div>
+          </div>
         </div>
       </div>
 
       <div class="tab-pane container-fluid" id="Reasons" role="tabpanel">
-        <a name="Reasons"></a>
         <div
           class="card min-vw-75 rounded shadow p-3 mb-5 border border-success"
         >
           <h3 class="card-header bg-secondary">
-            Reasons For Taking This Class
+            <a id="reasons"> Reasons For Taking This Class</a>
           </h3>
           <div class="card-body">
             <p>
@@ -152,31 +205,88 @@
       </div>
 
       <div class="container-fluid tab-pane" id="Tech" role="tabpanel">
-        <a name="Tech"></a>
         <div
           class="card min-vw-75 rounded shadow p-3 mb-5 border border-success"
         >
-          <h3 class="card-header bg-secondary">Technologies For This Class</h3>
+          <h3 class="card-header bg-secondary">
+            <a id="tech">Technologies For This Class</a>
+          </h3>
           <div class="card-body text-info">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">HTML</li>
-              <li class="list-group-item">CSS</li>
-              <li class="list-group-item">JavaScript</li>
+            <ul class="list-group list-group-flush fa-ul">
+              <li class="list-group-item">
+                <span class="fa-li"
+                  ><i
+                    class="fab fa-html5 fa-2x"
+                    data-fa-transform="grow-6 up-4"
+                    style="color: black;"
+                  ></i></span
+                >&nbsp;<abbr title="Hypertext Markup Language"
+                  ><a
+                    class="card-link"
+                    href="https://html.spec.whatwg.org/multipage/"
+                    target="_blank"
+                    >HTML</a
+                  ></abbr
+                >
+              </li>
+              <li class="list-group-item">
+                <span class="fa-li">
+                  <i
+                    class="fab fa-css3 fa-2x"
+                    data-fa-transform="grow-4 up-1"
+                    style="color: black;"
+                  ></i></span
+                >&nbsp;<abbr title="Cascading Style Sheet"
+                  ><a
+                    class="card-link"
+                    href="https://www.w3.org/TR/css-2018/"
+                    target="_blank"
+                    >CSS</a
+                  ></abbr
+                >
+              </li>
+              <li class="list-group-item">
+                <span class="fa-li">
+                  <i
+                    class="fab fa-js fa-2x"
+                    data-fa-transform="grow-4"
+                    style="color: black;"
+                  ></i></span
+                >&nbsp;<a
+                  class="card-link"
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                  target="_blank"
+                  >JavaScript</a
+                >
+              </li>
             </ul>
           </div>
         </div>
       </div>
 
       <div class="container-fluid tab-pane" id="Resources" role="tabpanel">
-        <a name="Resources"></a>
         <div
           class="card min-vw-75 rounded shadow p-3 mb-5 border border-success"
         >
           <div class="card-body">
-            <h3 class="card-header bg-secondary">Resources</h3>
-            <ul class="list-group list-group-flush">
+            <h3 class="card-header bg-secondary">
+              <a title="Resources" id="resources">Resources</a>
+            </h3>
+            <ul class="list-group list-group-flush fa-ul">
               <li class="list-group-item bg-light">
-                <a class="card-link" href="https://github.com">Github</a
+                <span class="fa-li">
+                  <i
+                    class="fab fa-github-square fa-2x"
+                    data-fa-transform="grow-8 down-4"
+                    style="color: black;"
+                  ></i></span
+                >&nbsp;
+                <a
+                  class="card-link"
+                  href="https://github.com"
+                  target="_blank"
+                  title="Visit GitHub's awesome array of repos"
+                  >Github</a
                 ><!-- Per w3 validator suggestion I removed all alt="foo" on <a> tags -->
                 <span
                   >&nbsp;This website's, obviously, key to any software
@@ -185,7 +295,17 @@
                 >
               </li>
               <li class="list-group-item bg-light">
-                <a class="card-link" href="https://stackoverflow.com"
+                <span class="fa-li">
+                  <i
+                    class="fab fa-stack-overflow fa-2x"
+                    data-fa-transform="grow-8 down-4"
+                    style="color: black;"
+                  ></i></span
+                >&nbsp;<a
+                  class="card-link"
+                  href="https://stackoverflow.com"
+                  target="_blank"
+                  title="Head over to stackoverflow if you're stuck and need answers."
                   >Stackoverflow</a
                 ><!-- Per w3 validator suggestion I removed all alt="foo" on <a> tags -->
                 <span
@@ -197,7 +317,19 @@
                 >
               </li>
               <li class="list-group-item bg-light">
-                <a class="card-link" href="https://dev.to">dev.to</a
+                <span class="fa-li">
+                  <i
+                    class="fab fa-dev fa-2x"
+                    data-fa-transform="grow-8 down-4"
+                    style="color: black;"
+                  ></i></span
+                >&nbsp;
+                <a
+                  class="card-link"
+                  href="https://dev.to"
+                  target="_blank"
+                  title="Check out dev.to"
+                  >dev.to</a
                 ><!-- Per w3 validator suggestion I removed all alt="foo" on <a> tags -->
                 <span
                   >&nbsp;This is a great blog, with well written articles on
@@ -207,7 +339,19 @@
                 >
               </li>
               <li class="list-group-item bg-light">
-                <a class="card-link" href="https://scotch.io">scotch.io</a
+                <span class="fa-li">
+                  <i
+                    class="fas fa-wine-bottle fa-2x"
+                    data-fa-transform="grow-8 down-6 rotate--45"
+                    style="color: black;"
+                  ></i
+                ></span>
+                <a
+                  class="card-link"
+                  href="https://scotch.io"
+                  target="_blank"
+                  title="Check out scotch.io blog"
+                  >scotch.io</a
                 ><!-- Per w3 validator suggestion I removed all alt="foo" on <a> tags -->
                 <span
                   >&nbsp;Another interesting blog, I regularly check this page
@@ -218,6 +362,256 @@
           </div>
         </div>
       </div>
+      <div
+        class="btn-group mr-2 btn-group-lg"
+        role="group"
+        aria-label="animation buttons"
+      >
+        <button
+          id="animateBtn"
+          type="button"
+          title="Start Animations"
+          class="p-2 mb-4 btn btn-primary rounded"
+        >
+          <i class="fas fa-play fa-lg" title="Play animations"></i>
+          Animation
+        </button>
+
+        <button
+          id="unAnimateBtn"
+          type="button"
+          title="Undo Animations"
+          class="p-2 mb-4 btn btn-danger rounded"
+        >
+          <i class="fas fa-undo fa-lg" title="Undo animations"></i>
+          Animation
+        </button>
+      </div>
     </main>
+    <footer>
+      <fieldset>
+        <div class="myInfo">
+          <address>
+            <i
+              class="fas fa-angle-double-right"
+              data-fa-transform="grow-10 left-6"
+              style="color: black;"
+              >&nbsp;</i
+            >
+            Comments? Feel free to
+            <i
+              class="fas fa-pencil-alt"
+              style="color: beige;"
+              aria-hidden="true"
+              title="write"
+            ></i>
+            me an
+            <a
+              href="mailto:toddmatheson@my.smccd.edu?Subject=Comments%on%Assignment1"
+              ><i class="far fa-envelope" title="Email"></i></a
+            >&nbsp;
+            <i
+              class="fas fa-angle-double-left"
+              data-fa-transform="grow-10 right-6"
+              style="color: black;"
+            ></i>
+          </address>
+        </div>
+      </fieldset>
+    </footer>
+    <script>
+      function runIt() {
+        $("h1:header")
+          .animate(
+            {
+              fontSize: "3.25em",
+              marginTop: "6px",
+              marginBottom: "6px",
+              opacity: "1.0",
+              color: "#4582EC",
+              duration: "slow",
+              easing: "easeInBack"
+            },
+            2000
+          )
+          .transition(
+            {
+              perspective: "50px",
+              rotateX: "360deg"
+            },
+            1000
+          )
+          .animate(
+            {
+              fontSize: "1.25em",
+              marginTop: "38px",
+              marginBottom: "12px",
+              opacity: "1.0",
+              color: "#d9534f",
+              duration: "slow",
+              easing: "easeOutElastic"
+            },
+            2000
+          )
+          .animate(
+            {
+              fontSize: "2.4em",
+              marginTop: "14px",
+              marginBottom: "8px",
+              opacity: "0.4",
+              color: "black",
+              duration: "slow",
+              easing: "easeInQuint"
+            },
+            2000
+          );
+        $("#h11").animate(
+          {
+            "font-weight": "bold",
+            marginTop: "40px",
+            fontSize: "2.25em",
+            duration: "slow",
+            easing: "easeOutBounce",
+            opacity: "1.0"
+          },
+          1400
+        );
+        $("#h12")
+          .animate(
+            {
+              "font-weight": "bold",
+              marginTop: "10px",
+              marginBottom: "20px",
+              fontSize: "1.8em",
+              duration: "slow",
+              easing: "easeInBounce",
+              opacity: "1.0"
+            },
+            1200
+          )
+          .queue(function(next) {
+            $("img#Todd")
+              .animate(
+                {
+                  duration: "slow",
+                  opacity: "0.3",
+                  easing: "easeOutQuint"
+                },
+                1000
+              )
+              .transition(
+                {
+                  perspective: "100px",
+                  rotateX: "360"
+                },
+                2250
+              )
+              .queue(function(next) {
+                $("img#Todd")
+                  .css({
+                    "border-top": "8px #02B875"
+                  })
+                  .css({
+                    "border-top-style": "solid"
+                  })
+                  .css({
+                    "border-bottom": "8px #02B875"
+                  })
+                  .css({
+                    "border-bottom-style": "solid"
+                  })
+                  .css({
+                    "border-left": "8px #02B875"
+                  })
+                  .css({
+                    "border-left-style": "solid"
+                  })
+                  .css({
+                    "border-right": "8px #02B875"
+                  })
+                  .css({
+                    "border-right-style": "solid"
+                  })
+                  .animate(
+                    {
+                      duration: "slow",
+                      opacity: "1.0",
+                      easing: "easInBack"
+                    },
+                    1200
+                  )
+                  .dequeue();
+              });
+            $(this).dequeue();
+          });
+      }
+
+      /* unRunIt() is tied to the "Undo Animations" btn I created next to the
+     "Start Animations" btn, to show how to reset the border of the img*/
+
+      function unRunIt() {
+        $("img#Todd")
+          .animate(
+            {
+              duration: "slow",
+              opacity: "0.3",
+              easing: "easeOutQuint"
+            },
+            2000
+          )
+          .queue(function(next) {
+            $("img#Todd")
+              .css({
+                "border-top": "2px #343A40"
+              })
+              .css({
+                "border-top-style": "solid"
+              })
+              .css({
+                "border-bottom": "2px #343A40"
+              })
+              .css({
+                "border-bottom-style": "solid"
+              })
+              .css({
+                "border-right": "2px #343A40"
+              })
+              .css({
+                "border-right-style": "solid"
+              })
+              .css({
+                "border-left": "2px #343A40"
+              })
+              .css({
+                "border-left-style": "solid"
+              })
+              .queue(function(next) {
+                $("img#Todd")
+                  .animate(
+                    {
+                      duration: "slow",
+                      opacity: "1.0",
+                      easing: "easeOutBack"
+                    },
+                    2000
+                  )
+                  .dequeue();
+              })
+              .dequeue();
+          });
+        $(this).dequeue();
+      }
+
+      $("document").ready(function() {
+        $("#animateBtn").click(function(evt) {
+          evt.preventDefault;
+          runIt();
+        });
+        $("#unAnimateBtn").click(function(evt) {
+          evt.preventDefault;
+          unRunIt();
+        });
+      });
+    </script>
   </body>
 </html>

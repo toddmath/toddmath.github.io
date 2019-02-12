@@ -1,8 +1,8 @@
 @import '../node_modules/bootstrap/dist/css/bootstrap-reboot.css';
-/*
+@import '/jquery-ui-1.12.1.custom/jquery-ui.min.css';
+@import '/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css';
+@import '/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css';
 @import '../node_modules/bootstrap/dist/css/bootstrap.css';
-*/
-
 @font-face {
   font-family: 'Josefin';
   src: url('../fonts/Josefin_Sans/JosefinSans-Bold.ttf') format('truetype');
@@ -59,32 +59,20 @@
   font-style: italic;
 }
 
-html {
-  padding: 30px;
-  padding-bottom: 8px;
-  padding-top: 8px;
+* {
+  box-sizing: border-box;
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern";
   -webkit-font-feature-settings: "kern";
   -moz-font-feature-settings: "kern";
+  outline: none !important;
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-body::after, body::before, body {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d4e4ef+0,86aecc+100;Grey+Gloss */
-  background: #d4e4ef;
-  /* Old browsers */
-  background: -moz-linear-gradient(45deg, hsla(204, 46%, 89%, 1) 0%, hsla(206, 41%, 66%, 1) 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(45deg, hsla(204, 46%, 89%, 1) 0%, hsla(206, 41%, 66%, 1) 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(45deg, hsla(204, 46%, 89%, 1) 0%, hsla(206, 41%, 66%, 1) 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc', GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
+.card-body, .card-header, .card, {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 body::after, body::before, body {
@@ -101,21 +89,24 @@ body::after, body::before, body {
   /* IE6-9 fallback on horizontal gradient */
 }
 
-body, html, ol, ul, li, p {
+ol, ul, li, p, .list-group, .list-group-item {
   font-family: 'Josefin' !important;
   font-weight: normal !important;
+  font-size: 1.05em;
+  line-height: 2.5ch;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, header {
   font-family: 'Titillium' !important;
   font-weight: bold !important;
+  font-size: 1.1em;
 }
 
-.card-body, .list-group, .list-group-item, .card-text {
+.card-body, .list-group, .list-group-item, .card-text, p {
   font-family: 'Josefin' !important;
 }
 
-.card-title, .card-header, .container, .container-fluid {
+.card-title, .card-header, h1, h2, h3, h4, h5, h6 {
   font-family: 'Titillium' !important;
 }
 
@@ -123,72 +114,63 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 10px;
   margin-left: 20px;
   margin-right: 20px;
-  color: white;
+  color: var(--light);
   cursor: pointer;
   box-shadow: 4px 3px 12px rgb(29.8%, 30.6%, 27.8%);
-  transition: ease-in 300ms box-shadow color;
+  transition: all 300ms ease-in;
 }
 
-.btn:hover, .btn:focus {
+.btn:hover {
   box-shadow: 2px 3px 6px rgb(29.8%, 30.6%, 27.8%);
-  color: rgb(29.8%, 30.6%, 27.8%);
-  background-color: hsv(158, 99.2, 0.3) !important;
-  /*
-  background-color: srgb(0.006, 0.720, 0.456);
-  */
+  color: var(--dark);
+  background-color: hsv(158, 99.2, 0.3);
 }
 
-a:hover, a:focus {
+a:hover {
   background-color: hsv(158, 99.2, 0.3) !important;
   color: hsv(158, 99.2, 0.3) !important;
-}
-
-/*
-h1 {
-  font-size: 1.75em;
-  font-style: inherit;
-  margin-top: 24px;
-  margin-bottom: 24px;
-  color: --dark;
-}
-
-h2 {
-  font-size: 1.5em;
-  font-style: inherit;
-}
-*/
-
-ol, ul, li {
-  font-size: 1em;
-  line-height: 2.75ch;
 }
 
 p {
   font-size: 1.05em;
   line-height: 2.5ch;
   word-wrap: break-word;
-  justify-content: left;
-}
-
-img::before, img::after {
-  size: 100%;
-  border: none;
 }
 
 img#Todd {
   border: 2px solid black;
-  box-shadow: 6px 8px 12px -1px black;
+  box-shadow: 6px 8px 12px -1px var(--gray-dark);
   border-radius: 6px;
-  transition: ease-in 300ms box-shadow;
+  width: 25%;
+  height: auto;
+  transform: box-shadow 800ms ease-in;
 }
 
-img#Todd:hover, img#Todd:focus, img#Todd:active {
-  box-shadow: 2px 3px 3px black;
+img#Todd:hover, img#Todd:focus {
+  transition-delay: 200ms;
+  box-shadow: 3px 4px 4px 0px var(--dark);
 }
 
-.display-4 {
-  font-family: 'Titillium' !important;
+#h11 {
+  font-family: 'Titillium', sans-serif !important;
+  font-weight: bold;
   margin-top: 40px;
+  font-size: 2.25em;
+}
+
+#h12 {
+  font-family: 'Titillium', sans-serif !important;
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+h3 {
+  font-family: 'Josefin', sans-serif !important;
+  font-size: 1.3em;
+  font-weight: bold;
 }
 
 body {
@@ -197,4 +179,77 @@ body {
 
 .nav-link {
   font-size: 1.2em;
+}
+
+footer {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Josefin' !important;
+  clear: none;
+  font-variant: small-caps;
+  letter-spacing: -0.2px !important;
+  word-spacing: 1px !important;
+  color: var(--gray);
+  background-color: var(--dark);
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  padding-top: 8px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  height: 100%;
+}
+
+footer p {
+  text-transform: unset;
+}
+
+footer a {
+  color: var(--info);
+}
+
+footer a:hover, footer a:focus {
+  color: var(--info);
+  text-transform: none;
+  font-style: normal;
+  font-style: initial;
+  text-decoration: none !important;
+}
+
+.pointer {
+  font-size: 34px;
+}
+
+hr {
+  color: black;
+  background-color: black;
+}
+
+button#animateBtn, button#unAnimateBtn {
+  font-size: 14px !important;
+  text-transform: uppercase;
+}
+
+a.btn {
+  font-size: 14px;
+  border-radius: 8px !important;
+  padding: 6px 14px !important;
+  font-size: 0.6rem !important;
+}
+
+.newBorder {
+  border: 8px solid var(--green) !important;
+  border-radius: 4px;
+  cursor: pointer !important;
+}
+
+.navbar, .navbar-dark {
+  background-color: #343a40 !important;
+}
+
+.nav-item, .nav-item a {
+  color: var(--gray) !important;
 }
