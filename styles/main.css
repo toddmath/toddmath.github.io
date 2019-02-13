@@ -234,12 +234,12 @@ button#animateBtn, button#unAnimateBtn {
   text-transform: uppercase;
 }
 
-button#blog, button#github {
+a#blog, a#github {
   font-size: 14px !important;
   text-transform: uppercase;
 }
 
-button {
+button, a.btn {
   font-size: 14px;
   border-radius: 8px;
   padding: 6px 14px;
