@@ -68,7 +68,7 @@
   outline: none !important;
 }
 
-.card-body, .card-header, .card, {
+.card-body, .card-header, .card {
   padding-left: 15px;
   padding-right: 15px;
   margin-left: 15px;
@@ -141,6 +141,7 @@ img#Todd {
   border: 2px solid black;
   box-shadow: 6px 8px 12px -1px var(--gray-dark);
   border-radius: 6px;
+  margin-bottom: 20px;
   width: 25%;
   height: auto;
   transform: box-shadow 800ms ease-in;
@@ -233,11 +234,15 @@ button#animateBtn, button#unAnimateBtn {
   text-transform: uppercase;
 }
 
-a.btn {
+button#blog, button#github {
+  font-size: 14px !important;
+  text-transform: uppercase;
+}
+
+button {
   font-size: 14px;
-  border-radius: 8px !important;
-  padding: 6px 14px !important;
-  font-size: 0.6rem !important;
+  border-radius: 8px;
+  padding: 6px 14px;
 }
 
 .newBorder {

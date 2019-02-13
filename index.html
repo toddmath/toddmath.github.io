@@ -142,11 +142,39 @@
           </h3>
           <div class="card-body">
             <h4 class="card-subtitle mb-2 text-muted">Todd Matheson</h4>
+
+            <div
+              class="btn-group mr-1 ml-0 mb-4 btn-group-lg"
+              role="group"
+              aria-label="animation buttons"
+            >
+              <button
+                id="animateBtn"
+                type="button"
+                title="Start Animations"
+                class="p-2 mb-2 btn btn-primary rounded"
+              >
+                <i class="fas fa-play fa-lg" title="Play animations"></i>
+                Animation
+              </button>
+
+              <button
+                id="unAnimateBtn"
+                type="button"
+                title="Undo Animations"
+                class="p-2 mb-2 btn btn-danger rounded"
+              >
+                <i class="fas fa-undo fa-lg" title="Undo animations"></i>
+                Animation
+              </button>
+            </div>
+
             <div
               class="d-inline-flex flex-wrap flex-sm-nowrap flex-row justify-content-center align-items-center"
             >
               <img
-                class=""
+                style="display: block;"
+                class="img-fluid mb-6 rounded mx-auto d-block float left"
                 src="Todd3.png"
                 id="Todd"
                 alt="Todd Matheson"
@@ -160,25 +188,29 @@
               </p>
             </div>
             <div
-              class="btn-group mb-4 mt-2 btn-group-lg align-self-start"
+              class="btn-group mr-1 ml-0 mb-4 btn-group-lg"
               role="group"
               aria-label="Links for Todd Matheson's profile pages."
             >
-              <a
+              <button
                 href="https://www.toddmath.com"
-                class=" p-2 mx-1 mt-auto mb-auto btn btn-primary rounded align-self-start "
+                id="blog"
+                class=" p-2 mb-2 btn btn-primary rounded"
                 target="_blank"
                 title="Check out my blog I created"
                 role="button"
-                ><i class="fas fa-blog fa-3x"></i></a
+              >
+                <i class="fas fa-blog fa-lg"></i> My Blog</button
               ><!-- Per w3 validator suggestion I removed all alt="foo" on <a> tags -->
-              <a
+              <button
                 href="https://github.com/toddmath"
-                class=" p-2 mx-1 mt-auto mb-auto btn btn-primary rounded align-self-start"
+                id="github"
+                class=" p-2 mb-2 btn btn-primary rounded"
                 target="_blank"
                 role="button"
               >
-                <i class="fab fa-github fa-3x" title="My Github profile"></i></a
+                <i class="fab fa-github fa-lg" title="My Github profile"></i> My
+                GitHub</button
               ><!-- Per w3 validator suggestion I removed all alt="foo" on <a> tags -->
             </div>
           </div>
@@ -204,7 +236,11 @@
         </div>
       </div>
 
-      <div class="container-fluid tab-pane" id="Tech" role="tabpanel">
+      <div
+        class="container-fluid tab-pane overflow-auto min-vw-75 w-auto"
+        id="Tech"
+        role="tabpanel"
+      >
         <div
           class="card min-vw-75 rounded shadow p-3 mb-5 border border-success"
         >
@@ -264,7 +300,11 @@
         </div>
       </div>
 
-      <div class="container-fluid tab-pane" id="Resources" role="tabpanel">
+      <div
+        class="container-fluid overflow-auto tab-pane min-vw-50 w-auto"
+        id="Resources"
+        role="tabpanel"
+      >
         <div
           class="card min-vw-75 rounded shadow p-3 mb-5 border border-success"
         >
@@ -361,31 +401,6 @@
             </ul>
           </div>
         </div>
-      </div>
-      <div
-        class="btn-group mr-2 btn-group-lg"
-        role="group"
-        aria-label="animation buttons"
-      >
-        <button
-          id="animateBtn"
-          type="button"
-          title="Start Animations"
-          class="p-2 mb-4 btn btn-primary rounded"
-        >
-          <i class="fas fa-play fa-lg" title="Play animations"></i>
-          Animation
-        </button>
-
-        <button
-          id="unAnimateBtn"
-          type="button"
-          title="Undo Animations"
-          class="p-2 mb-4 btn btn-danger rounded"
-        >
-          <i class="fas fa-undo fa-lg" title="Undo animations"></i>
-          Animation
-        </button>
       </div>
     </main>
     <footer>
