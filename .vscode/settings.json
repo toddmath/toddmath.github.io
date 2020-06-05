@@ -1,11 +1,6 @@
 {
   "git.ignoreLimitWarning": true,
-  "cSpell.words": [
-    "Aboutme",
-    "Scrollspy",
-    "tablist",
-    "tabpanel"
-  ],
+  "cSpell.words": ["Aboutme", "Scrollspy", "tablist", "tabpanel"],
   "cSpell.enabledLanguageIds": [
     "asciidoc",
     "c",
