@@ -87,9 +87,12 @@
   <meta property="og:image:height" content="1005" />
   <meta property="og:locale" content="en_US" />
   <title>CIS128-OLH Mobile Web App Development CRN43884</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha256-rByPlHULObEjJ6XQxW/flG2r+22R5dKiAoef+aXWfik=" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.structure.min.css" integrity="sha256-rxais37anKUnpL5QzSYte+JnIsmkGmLG+ZhKSkZkwVM=" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.theme.min.css" integrity="sha256-AjyoyaRtnGVTywKH/Isxxu5PXI0s4CcE0BzPAX83Ppc=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+    integrity="sha256-rByPlHULObEjJ6XQxW/flG2r+22R5dKiAoef+aXWfik=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.structure.min.css"
+    integrity="sha256-rxais37anKUnpL5QzSYte+JnIsmkGmLG+ZhKSkZkwVM=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.theme.min.css"
+    integrity="sha256-AjyoyaRtnGVTywKH/Isxxu5PXI0s4CcE0BzPAX83Ppc=" crossorigin="anonymous" />
   <link rel="stylesheet" href="styles/bootstrap.min.css" />
   <link rel="stylesheet" href="styles/bootstrap-reboot.min.css" />
   <link href="styles/main.css" rel="stylesheet" />
@@ -431,16 +434,24 @@
       $(this).dequeue();
     }
 
-    document.addEventListener('load', () => {
-      $("#animateBtn").click(function (evt) {
-        evt.preventDefault;
-        runIt();
-      });
-      $("#unAnimateBtn").click(function (evt) {
-        evt.preventDefault;
-        unRunIt();
-      });
+    document.getElementById('animateBtn').addEventListener('click', (e) => {
+      if (e) e.preventDefault()
+      runIt()
     })
+
+    document.getElementById('unAnimateBtn').addEventListener('click', (e) => {
+      if (e) e.preventDefault()
+      unRunIt()
+    })
+
+    // $("#animateBtn").click(function (evt) {
+    //   if (evt) evt.preventDefault;
+    //   runIt();
+    // });
+    // $("#unAnimateBtn").click(function (evt) {
+    //   if (evt) evt.preventDefault;
+    //   unRunIt();
+    // });
     // $("document").ready(function () {
     //   $("#animateBtn").click(function (evt) {
     //     evt.preventDefault;
