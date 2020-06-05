@@ -340,7 +340,7 @@
         );
       $("#h11").animate(
         {
-          "font-weight": "bold",
+          fontWeight: "bold",
           marginTop: "40px",
           fontSize: "2.25em",
           duration: "slow",
@@ -352,7 +352,7 @@
       $("#h12")
         .animate(
           {
-            "font-weight": "bold",
+            fontWeight: "bold",
             marginTop: "10px",
             marginBottom: "20px",
             fontSize: "1.8em",
@@ -382,28 +382,7 @@
             .queue(function (next) {
               $("img#Todd")
                 .css({
-                  "border-top": "8px #02B875"
-                })
-                .css({
-                  "border-top-style": "solid"
-                })
-                .css({
-                  "border-bottom": "8px #02B875"
-                })
-                .css({
-                  "border-bottom-style": "solid"
-                })
-                .css({
-                  "border-left": "8px #02B875"
-                })
-                .css({
-                  "border-left-style": "solid"
-                })
-                .css({
-                  "border-right": "8px #02B875"
-                })
-                .css({
-                  "border-right-style": "solid"
+                  border: "8px solid #02B875"
                 })
                 .animate(
                   {
@@ -419,9 +398,7 @@
         });
     }
 
-    /* unRunIt() is tied to the "Undo Animations" btn I created next to the
-   "Start Animations" btn, to show how to reset the border of the img*/
-
+    /** Resets the animation styles */
     function unRunIt() {
       $("img#Todd")
         .animate(
@@ -435,28 +412,7 @@
         .queue(function (next) {
           $("img#Todd")
             .css({
-              "border-top": "2px #343A40"
-            })
-            .css({
-              "border-top-style": "solid"
-            })
-            .css({
-              "border-bottom": "2px #343A40"
-            })
-            .css({
-              "border-bottom-style": "solid"
-            })
-            .css({
-              "border-right": "2px #343A40"
-            })
-            .css({
-              "border-right-style": "solid"
-            })
-            .css({
-              "border-left": "2px #343A40"
-            })
-            .css({
-              "border-left-style": "solid"
+              border: "2px solid #343A40"
             })
             .queue(function (next) {
               $("img#Todd")
@@ -475,7 +431,7 @@
       $(this).dequeue();
     }
 
-    $("document").ready(function () {
+    document.addEventListener('load', () => {
       $("#animateBtn").click(function (evt) {
         evt.preventDefault;
         runIt();
@@ -484,7 +440,17 @@
         evt.preventDefault;
         unRunIt();
       });
-    });
+    })
+    // $("document").ready(function () {
+    //   $("#animateBtn").click(function (evt) {
+    //     evt.preventDefault;
+    //     runIt();
+    //   });
+    //   $("#unAnimateBtn").click(function (evt) {
+    //     evt.preventDefault;
+    //     unRunIt();
+    //   });
+    // });
   </script>
 </body>
 
